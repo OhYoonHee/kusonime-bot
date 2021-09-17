@@ -1,0 +1,6 @@
+beautifulsoup4
+chevron
+pyrogram
+python-dotenv
+telegraph
+tgcrypto

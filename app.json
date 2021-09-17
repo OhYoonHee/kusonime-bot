@@ -1,0 +1,24 @@
+{
+    "name" : "KusonimeBot",
+    "keywords": [
+      "kusonime",
+      "bot",
+      "telegram"
+    ],
+    "env": {
+        "BOT_TOKEN" : {
+            "description" : "BOT_TOKEN from @botfather",
+            "required" : true
+        },
+        "PH_TOKEN" : {
+            "description" : "Your Telegra.ph Token"
+        }
+    },
+    "formation": {
+        "worker" : {
+            "quantity" : 1,
+            "size" : "free"
+        }
+    },
+    "stack" : "Container"
+}
