@@ -1,4 +1,4 @@
-FROM 3.8
+FROM python:3.8
 
 COPY . /usr/KusonimeBot
 WORKDIR /usr/KusonimeBot
