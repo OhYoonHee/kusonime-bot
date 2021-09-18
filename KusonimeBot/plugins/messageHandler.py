@@ -11,7 +11,7 @@ async def messageHandler(_, msg : Message):
     if test:
         url = test.group(1)
         init_url = Storage.get(url.lower(), None)
-        if init_url == None:
+        if init_url != None:
             ph = init_url.get('ph_url')
             await msg.reply(ph, quote = True)
             return
