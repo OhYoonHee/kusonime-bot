@@ -11,7 +11,8 @@
             "required" : true
         },
         "PH_TOKEN" : {
-            "description" : "Your Telegra.ph Token"
+            "description" : "Your Telegra.ph Token",
+            "required" : false
         }
     },
     "formation": {
