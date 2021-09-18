@@ -1,5 +1,5 @@
 from KusonimeBot.TelegramBot import TelegramBot
-from pyrogram.types import Message
+from pyrogram.types import Message, InlineKeyboardMarkup as InlineKeyboard, InlineKeyboardButton as Button
 from pyrogram import filters
 import re
 from KusonimeBot.util import Kusonime, Storage
@@ -19,4 +19,10 @@ async def messageHandler(_, msg : Message):
         if not tgraph['error']:
             await msg.reply(tgraph['url'], quote = True)
             Storage[url.lower()] = dict(ph_url = tgraph['url'])
+        return
+    if msg.chat.type == "private":
+        keyboard = []
+        keyboard.append(Button('Click me', switch_inline_query = "anime_title"))
+        reply_markup = InlineKeyboard([keyboard])
+        await msg.reply("Send me kusonime link to get download link, you can search kusonime in my inline", quote = True, reply_markup = reply_markup)
         return
